@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  backend: {
+    host: 'https://pucesapwd.puce.edu.ec:44404'
+  }
 };

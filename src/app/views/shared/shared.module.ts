@@ -9,6 +9,9 @@ import {FooterComponent} from "./footer/footer.component";
     HeaderComponent,
     FooterComponent,
   ],
+  exports: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule
   ]
