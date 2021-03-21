@@ -3,22 +3,12 @@ import {Routes, RouterModule} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'portfolio',
-    loadChildren: () => import('./views/portfolio/portfolio.module').then(m => m.PortfolioModule)
+    path: '',
+    loadChildren: () => import('./views/profile/profile.module').then(m => m.ProfileModule)
   },
   {
     path: 'blog',
     loadChildren: () => import('./views/blog/blog.module').then(m => m.BlogModule)
-  },
-  {
-    path: '**',
-    redirectTo: 'blog',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
-    redirectTo: 'blog',
-    pathMatch: 'full'
   }
 ];
 
