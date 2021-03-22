@@ -304,7 +304,7 @@ tr,
 td,
 th {
   border-color: inherit;
-  border-style: solid;
+  /*border-style: solid;*/
   border-width: 0;
 }
 
@@ -11268,6 +11268,10 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+.txt-justify {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

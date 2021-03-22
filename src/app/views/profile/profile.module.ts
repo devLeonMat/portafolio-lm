@@ -8,6 +8,7 @@ import {ResumeComponent} from './resume/resume.component';
 import {ServicesComponent} from './services/services.component';
 import {ContactComponent} from './contact/contact.component';
 import {ComponentsModule} from "../../components/components.module";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {ComponentsModule} from "../../components/components.module";
     CommonModule,
     ProfileRoutingModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+    MatTooltipModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

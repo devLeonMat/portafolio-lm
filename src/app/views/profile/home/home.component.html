@@ -1,29 +1,67 @@
-<div class="page-header">
-  <div class="row">
-    <div class="col-sm-4 col-md-4 col-lg-4">
-      <div class="photo">
-        <img class="profile-photo" src="../../../../assets/img/myphoto.jpg" alt="" width="280">
+<div class="home">
+  <div class="page-header">
+    <div>
+      <div class="row profile-header">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <div class="photo">
+            <img class="profile-photo img-thumbnail" src="../../../../assets/img/myphoto.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 text-center name-container">
+          <div>
+            <h2 class="title-block">Leon Matias Roslin</h2>
+            <app-slider></app-slider>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/leon.matias.75/" target="_blank" title="Facebook">
+              <img src="../../../../assets/img/icons/facebook-logo.svg" alt="">
+            </a>
+            <a href="https://www.instagram.com/leonmatias2020/" target="_blank" title="Instagram">
+              <img src="../../../../assets/img/icons/instagram.svg" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/leonmatias2017/" target="_blank" title="LinkedIn">
+              <img src="../../../../assets/img/icons/linkedin.svg" alt="">
+            </a>
+            <a href="https://github.com/leonmatias2015" target="_blank" title="github">
+              <img src="../../../../assets/img/icons/github.svg" alt="">
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-sm-8 col-md-8 col-lg-8 text-center">
-      <div class="title-block">
-        <h2>Leon Matias Roslin</h2>
-        <app-slider></app-slider>
+  </div>
+  <div class="row pt-5 pb-4 profile-description">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 ps-sm-5">
+        <h2>About <span class="txt-color-1">Me</span></h2>
+        <p class="txt-justify">Bachelor of Systems Engineering, with extensive experience in development FrontEnd and
+          BackEnd, using new
+          technologies, I have advanced knowledge in <span matTooltip="Java 7,8,11"
+                                                           class="java-style">Java</span>, implementing systems built
+          with <span matTooltip="Spring boot, cloud, security, batch, etc"
+                     class="spring-style">Spring</span> and other frameworks,
+          I
+          also have experience and advanced knowledge in <span matTooltip="Angular 4+"
+                                                               class="angular-style">Angular</span>, <span
+            class="ionic-style">Ionic</span>, <span
+            class="react-style">React</span>, <span
+            class="node-style">NodeJs</span>, <span
+            class="kotlin-style">Kotlin</span> also have high capacity
+          for
+          work and responsibility, excellent level of communication.
+          I invite you to visit my repository.</p>
+        <a href="../../../../assets/files/LEON%20MATIAS%20R.%20FULLSTACK%20SENIOR-EN.pdf" type="button"
+           class="btn btn-outline-secondary mt-4" download="CV-LEON-MATIAS.pdf">DOWNLOAD RESUME</a>
       </div>
-
-      <div class="social-links">
-        <a href="#" target="_blank" title="Twitter">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#" target="_blank" title="Facebook">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#" target="_blank" title="Instagram">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="#" target="_blank" title="LinkedIn">
-          <i class="fa fa-linkedin"></i>
-        </a>
+      <div class="col-xs-12 col-sm-6 ps-sm-5 mt-4">
+        <table class="table">
+          <tbody>
+          <tr *ngFor="let val of profileDetails">
+            <td class="table-title w-25">{{val.title}}</td>
+            <td class="table-value w-75">{{val.value}}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
