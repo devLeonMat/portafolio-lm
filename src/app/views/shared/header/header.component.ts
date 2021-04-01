@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,15 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  openMenu() {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    });
   }
 
 }

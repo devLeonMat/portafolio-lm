@@ -7,7 +7,10 @@
         </a>
       </div>
       <div>
-        <ul class="navbar-nav">
+        <div class="menu-modal">
+          <img src="../../../../assets/img/icons/icon-menu.svg" (click)="openMenu()" alt="" width="37">
+        </div>
+        <ul class="navbar-nav menu-list">
           <li class="nav-item me-2">
             <a class="nav-link" routerLink="/home"
                [routerLinkActive]="'nav-link-active'">Home</a>

@@ -30,3 +30,17 @@
   font-weight: bold;
   border-bottom: solid 2px #2196F3;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .menu-list {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-modal {
+    display: none;
+  }
+
+}

@@ -2,7 +2,7 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PortfolioComponent} from "./portfolio/portfolio.component";
 import {ProfileRoutingModule} from "./profile-routing.module";
-import {SharedModule} from "../shared/shared.module";
+import {SharedModule} from "../../shared/shared.module";
 import {HomeComponent} from './home/home.component';
 import {ResumeComponent} from './resume/resume.component';
 import {ServicesComponent} from './services/services.component';

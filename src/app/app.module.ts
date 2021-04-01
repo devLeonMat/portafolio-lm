@@ -4,9 +4,13 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SharedModule} from "./views/shared/shared.module";
-import {BlogModule} from "./views/blog/blog.module";
-import {ProfileModule} from "./views/profile/profile.module";
-import {ComponentsModule} from "./components/components.module";
+import {BlogModule} from "./views/pages/blog/blog.module";
+import {ProfileModule} from "./views/pages/profile/profile.module";
+import {ComponentsModule} from "./views/components/components.module";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import {ComponentsModule} from "./components/components.module";
     SharedModule,
     ProfileModule,
     BlogModule,
+    MatSidenavModule,
+    ReactiveFormsModule,
+    MatRadioModule,
+    MatButtonModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
