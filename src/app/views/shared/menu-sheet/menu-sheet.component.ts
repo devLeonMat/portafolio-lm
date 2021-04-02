@@ -16,8 +16,7 @@ export class MenuSheetComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateRoute(route: string) {
-    this.route.navigateByUrl(route);
+  dismissMenu() {
     this._bottomSheetRef.dismiss();
   }
 
