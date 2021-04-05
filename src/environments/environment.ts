@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   backend: {
-    host: 'https://pucesapwd.puce.edu.ec:44404'
+    host: 'https://portfolio-lmr-default-rtdb.firebaseio.com/'
   }
 };
 

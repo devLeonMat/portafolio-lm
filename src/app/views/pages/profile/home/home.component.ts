@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {HomeService} from '../../../../core/services/home.service';
+import {BioModel} from '../../../../data/schema/bio.model';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +9,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  profileDetails = [
-    {title: 'Age', value: '29'},
-    {title: 'Residence', value: 'PERU'},
-    {title: 'Address', value: 'Callao, Lima'},
-    {title: 'e-mail', value: 'leon.matias.dev@gmail.com'},
-    {title: 'Phone', value: '+51 920 725 531'},
-    {title: 'Freelance', value: 'Available'}
-  ];
+  bioModel: BioModel = new BioModel();
 
-  constructor() {
+  constructor(private homeService: HomeService) {
   }
 
   ngOnInit(): void {
+    this.homeService.getBio().subscribe(resp => {
+      this.bioModel = resp;
+      console.log(this.bioModel);
+      localStorage.setItem('bio-info', JSON.stringify(this.bioModel));
+      console.log(JSON.stringify(this.bioModel));
+    });
   }
 
 
