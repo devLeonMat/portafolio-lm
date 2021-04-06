@@ -23,41 +23,95 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, Helvetica, sans-serif !important;
 }
 
-/*scroll style*/
-/*::-webkit-scrollbar {*/
-/*  width: 7px;*/
-/*  height: 7px;*/
-/*}*/
-
-/*::-webkit-scrollbar-thumb {*/
-/*  background: radial-gradient(circle, #b8ddfc 14%, #b8ddfc 64%);*/
-/*  border-radius: 10px;*/
-/*}*/
-
-/*::-webkit-scrollbar-thumb:hover {*/
-/*  background: radial-gradient(circle, #2196f3 14%, #2196f3 64%);*/
-/*}*/
-
-/*::-webkit-scrollbar-track {*/
-/*  background: #ffffff;*/
-/*  border-radius: 10px;*/
-/*  box-shadow: inset 7px 10px 12px #f0f0f0;*/
-/*}*/
-
 /*scroll bar v2*/
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #b8ddfc;
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
   background: rgba(33, 150, 243, 0.83);
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
   background: #ffffff;
   border-radius: 10px;
   box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
+.page-header {
+  font-family: "Montserrat", Courier, monospace;
+  background-color: #2196f3;
+  background-image: url(//lmpixels.com/wp/aveo/wp-content/uploads/2017/09/sp_main_bg.png);
+  height: 100%;
+  position: relative;
+  margin-bottom: 0;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-sizing: border-box;
+}
+
+::ng-deep.mat-typography h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+.row {
+  --bs-gutter-x: 1.5rem !important;
+  --bs-gutter-y: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-top: calc(var(--bs-gutter-y) * -1) !important;
+  margin-right: calc(var(--bs-gutter-x) / -19) !important;
+  margin-left: calc(var(--bs-gutter-x) / -19) !important;
+}
+
+@media only screen and (max-width: 575px) {
+  .row {
+    --bs-gutter-x: 1.5rem !important;
+    --bs-gutter-y: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-top: calc(var(--bs-gutter-y) * -1) !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+.txt-color-1 {
+  color: #2196F3 !important;
+}
+
+.title-block-2 {
+  color: #ffffff !important;
+  font-size: 35px !important;
+  font-weight: 600 !important;
+}
+
+.page-content {
+  background-color: #ffffff !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 15px;
+  line-height: 1.6em;
+}
+
+.page-content {
+  padding: 30px 15px 50px;
+}
+
+@media only screen and (max-width: 991px) {
+  .page-content {
+    padding: 30px 30px 50px;
+  }
 }

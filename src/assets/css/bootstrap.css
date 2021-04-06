@@ -625,6 +625,27 @@ progress {
   margin-left: auto;
 }
 
+@media (min-width: 320px) {
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: var(--bs-gutter-y);
+  }
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -641,6 +662,25 @@ progress {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+  }
+
+  .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -655,24 +695,6 @@ progress {
   }
 }
 
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) / -2);
-  margin-left: calc(var(--bs-gutter-x) / -2);
-}
-
-.row > * {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) / 2);
-  padding-left: calc(var(--bs-gutter-x) / 2);
-  margin-top: var(--bs-gutter-y);
-}
 
 .col {
   flex: 1 0 0%;
@@ -7902,6 +7924,36 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
+@media (min-width: 320px ) and (max-width: 576px) {
+  .my-usm-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .my-usm-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .my-usm-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .my-usm-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .my-usm-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+
+}
+
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -11272,6 +11324,18 @@ textarea.form-control-lg {
 
 .txt-justify {
   text-align: justify;
+}
+
+.mx-width-250 {
+  max-width: 250px;
+}
+
+.mx-width-300 {
+  max-width: 300px;
+}
+
+.mx-width-350 {
+  max-width: 350px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
