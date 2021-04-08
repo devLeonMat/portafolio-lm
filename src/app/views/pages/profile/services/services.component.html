@@ -73,16 +73,16 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class=" col-xs-12 col-sm-12 ">
-            <div id="col_inner_id-606bdc6bd89f9" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-
-              <div class="block-title">
-<!--                <h3>Clients<span></span></h3>-->
-              </div>
-            </div>
+        <div class=" col-sm-12 pt-4">
+          <div class="block-title">
+            <h2><span class="txt-color-1"> Companies</span> where I have worked</h2>
           </div>
         </div>
+        <carousel [autoplay]="true" [cellWidth]="100" [arrows]="false">
+          <div class="carousel-cell " *ngFor="let img of images">
+            <img src="{{img.path}}" width="80" alt="logo company" class="shadow">
+          </div>
+        </carousel>
       </section>
     </div>
   </div>

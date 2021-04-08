@@ -28,3 +28,22 @@
   -o-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
   box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
 }
+
+.client-block {
+  text-align: center;
+  padding: 5px 0;
+  opacity: .4;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.client-block:hover {
+  opacity: 1;
+}
+
+carousel {
+  height: 90px !important;
+}

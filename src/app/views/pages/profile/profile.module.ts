@@ -9,6 +9,7 @@ import {ServicesComponent} from './services/services.component';
 import {ContactComponent} from './contact/contact.component';
 import {ComponentsModule} from "../../components/components.module";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     ProfileRoutingModule,
     SharedModule,
     ComponentsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    IvyCarouselModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
