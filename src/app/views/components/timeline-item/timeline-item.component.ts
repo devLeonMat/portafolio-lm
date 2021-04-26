@@ -17,4 +17,8 @@ export class TimelineItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showDetails() {
+    window.open('https://www.linkedin.com/in/leonmatias2017/', '_blank');
+
+  }
 }

@@ -3,6 +3,7 @@ import {EducationService} from '../../../../core/services/education.service';
 import {ItemTimeLineModel} from '../../../../data/schema/itemTimeLine.model';
 import {SkillService} from '../../../../core/services/skill.service';
 import {SkillModel} from '../../../../data/schema/skill.model';
+import {ExperienceService} from '../../../../core/services/experience.service';
 
 @Component({
   selector: 'app-resume',
@@ -12,18 +13,24 @@ import {SkillModel} from '../../../../data/schema/skill.model';
 export class ResumeComponent implements OnInit {
 
   educationList: ItemTimeLineModel[] = [];
+  experienceList: ItemTimeLineModel[] = [];
   skillList: SkillModel[] = [];
   skillListFront: SkillModel[] = [];
   skillListBack: SkillModel[] = [];
 
   constructor(private educationService: EducationService,
-              private skillService: SkillService,) {
+              private experienceService: ExperienceService,
+              private skillService: SkillService) {
   }
 
   ngOnInit(): void {
     this.educationService.getEducation().subscribe(resp => {
       this.educationList = resp;
       this.educationList.reverse();
+    });
+    this.experienceService.getExperience().subscribe(resp => {
+      this.experienceList = resp;
+      this.experienceList.reverse();
     });
 
     this.skillService.getSkills().subscribe(resp => {

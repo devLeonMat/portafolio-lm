@@ -8,37 +8,41 @@
   </div>
   <div class="row pt-4 pb-4 page-content">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 ps-sm-4">
-        <h3 class="subtitle-resume">Education</h3>
-        <div class="overflow-auto scroll-container">
-          <div class="timeline" *ngFor="let ed of educationList">
-            <app-timeline-item [item-data]="ed" [type]="'ED'"></app-timeline-item>
+      <div class="col-xs-12 col-sm-8 ps-sm-4">
+        <div>
+          <h3 class="subtitle-resume">Experience</h3>
+          <div class="overflow-auto scroll-container">
+            <div class="timeline" *ngFor="let ed of experienceList">
+              <app-timeline-item [item-data]="ed" [type]="'EX'"></app-timeline-item>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h3 class="subtitle-resume">Education</h3>
+          <div class="overflow-auto scroll-container">
+            <div class="timeline" *ngFor="let ed of educationList">
+              <app-timeline-item [item-data]="ed" [type]="'ED'"></app-timeline-item>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6 ps-sm-4 my-usm-5">
-        <h3 class="subtitle-resume">Experience</h3>
-        <div class="overflow-auto scroll-container">
-          <div class="timeline" *ngFor="let ed of educationList">
-            <app-timeline-item [item-data]="ed" [type]="'EX'"></app-timeline-item>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-xs-12 col-sm-6 ps-sm-4">
-        <h3 class="subtitle-resume">Frontend Skills</h3>
-        <div class="overflow-auto scroll-container-skills">
+      <div class="col-xs-12 col-sm-4 ps-sm-4 my-usm-5">
+        <div>
+          <h3 class="subtitle-resume">Frontend <span class="txt-color-1">Skills</span></h3>
           <div *ngFor="let sk of skillListFront">
-            <app-skill-bar [skill]="sk"></app-skill-bar>
+            <app-skill-bar [skill]="sk" [category]="'f'"></app-skill-bar>
           </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 ps-sm-5 my-usm-5">
-        <h3 class="subtitle-resume">Backend Skills</h3>
-        <div class="overflow-auto scroll-container-skills">
+        <div class="mt-4">
+          <h3 class="subtitle-resume">Backend <span class="txt-color-1">Skills</span></h3>
           <div *ngFor="let sk of skillListBack">
-            <app-skill-bar [skill]="sk"></app-skill-bar>
+            <app-skill-bar [skill]="sk" [category]="'b'"></app-skill-bar>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h3 class="subtitle-resume">Cloud <span class="txt-color-1">Skills</span></h3>
+          <div *ngFor="let sk of skillListBack">
+            <app-skill-bar [skill]="sk" [category]="'c'"></app-skill-bar>
           </div>
         </div>
       </div>

@@ -10,6 +10,9 @@ import {ContactComponent} from './contact/contact.component';
 import {ComponentsModule} from "../../components/components.module";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatButtonModule} from "@angular/material/button";
+import {MatChipsModule} from "@angular/material/chips";
 
 
 @NgModule({
@@ -20,13 +23,16 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     ServicesComponent,
     ContactComponent
   ],
-  imports: [
-    CommonModule,
-    ProfileRoutingModule,
-    SharedModule,
-    ComponentsModule,
-    MatTooltipModule,
-    IvyCarouselModule
+    imports: [
+        CommonModule,
+        ProfileRoutingModule,
+        SharedModule,
+        ComponentsModule,
+        MatTooltipModule,
+        IvyCarouselModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatChipsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -9,11 +9,16 @@ import {SkillModel} from '../../../data/schema/skill.model';
 export class SkillBarComponent implements OnInit {
 
   @Input() skill: SkillModel;
+  @Input() category = '';
+  progressBar = ['progress-bar'];
+  progress = ['progress'];
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.progressBar.push(`bg-${this.category}`);
+    this.progress.push(`bd-${this.category}`);
   }
 
 }
