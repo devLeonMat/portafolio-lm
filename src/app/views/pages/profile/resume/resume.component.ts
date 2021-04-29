@@ -17,6 +17,7 @@ export class ResumeComponent implements OnInit {
   skillList: SkillModel[] = [];
   skillListFront: SkillModel[] = [];
   skillListBack: SkillModel[] = [];
+  skillListCloud: SkillModel[] = [];
 
   constructor(private educationService: EducationService,
               private experienceService: ExperienceService,
@@ -37,6 +38,7 @@ export class ResumeComponent implements OnInit {
       this.skillList = resp;
       this.skillListFront = this.skillList.filter(value => value.type === 'F');
       this.skillListBack = this.skillList.filter(value => value.type === 'B');
+      this.skillListCloud = this.skillList.filter(value => value.type === 'C');
       console.log(this.skillList);
       console.log(this.skillListFront);
       console.log(this.skillListBack);
