@@ -12,12 +12,5 @@ import {Component, OnInit} from '@angular/core';
     </div>`,
   styleUrls: ['./chat-button.component.css']
 })
-export class ChatButtonComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
+export class ChatButtonComponent {
 }
